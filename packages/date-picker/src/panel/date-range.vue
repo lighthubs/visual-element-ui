@@ -202,13 +202,13 @@
     nextDate,
     extractDateFormat,
     extractTimeFormat
-  } from 'element-ui/src/utils/date-util';
-  import Clickoutside from 'element-ui/src/utils/clickoutside';
-  import Locale from 'element-ui/src/mixins/locale';
+  } from 'visual-element-ui/src/utils/date-util';
+  import Clickoutside from 'visual-element-ui/src/utils/clickoutside';
+  import Locale from 'visual-element-ui/src/mixins/locale';
   import TimePicker from './time';
   import DateTable from '../basic/date-table';
-  import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import ElInput from 'visual-element-ui/packages/input';
+  import ElButton from 'visual-element-ui/packages/button';
 
   const calcDefaultValue = (defaultValue) => {
     if (Array.isArray(defaultValue)) {

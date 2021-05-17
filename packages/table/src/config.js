@@ -1,4 +1,4 @@
-import { getPropByPath } from 'element-ui/src/utils/util';
+import { getPropByPath } from 'visual-element-ui/src/utils/util';
 
 export const cellStarts = {
   default: {

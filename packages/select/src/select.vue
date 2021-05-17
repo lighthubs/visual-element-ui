@@ -134,21 +134,21 @@
 </template>
 
 <script type="text/babel">
-  import Emitter from 'element-ui/src/mixins/emitter';
-  import Focus from 'element-ui/src/mixins/focus';
-  import Locale from 'element-ui/src/mixins/locale';
-  import ElInput from 'element-ui/packages/input';
+  import Emitter from 'visual-element-ui/src/mixins/emitter';
+  import Focus from 'visual-element-ui/src/mixins/focus';
+  import Locale from 'visual-element-ui/src/mixins/locale';
+  import ElInput from 'visual-element-ui/packages/input';
   import ElSelectMenu from './select-dropdown.vue';
   import ElOption from './option.vue';
-  import ElTag from 'element-ui/packages/tag';
-  import ElScrollbar from 'element-ui/packages/scrollbar';
+  import ElTag from 'visual-element-ui/packages/tag';
+  import ElScrollbar from 'visual-element-ui/packages/scrollbar';
   import debounce from 'throttle-debounce/debounce';
-  import Clickoutside from 'element-ui/src/utils/clickoutside';
-  import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';
-  import scrollIntoView from 'element-ui/src/utils/scroll-into-view';
-  import { getValueByPath, valueEquals, isIE, isEdge } from 'element-ui/src/utils/util';
+  import Clickoutside from 'visual-element-ui/src/utils/clickoutside';
+  import { addResizeListener, removeResizeListener } from 'visual-element-ui/src/utils/resize-event';
+  import scrollIntoView from 'visual-element-ui/src/utils/scroll-into-view';
+  import { getValueByPath, valueEquals, isIE, isEdge } from 'visual-element-ui/src/utils/util';
   import NavigationMixin from './navigation-mixin';
-  import { isKorean } from 'element-ui/src/utils/shared';
+  import { isKorean } from 'visual-element-ui/src/utils/shared';
 
   export default {
     mixins: [Emitter, Locale, Focus('reference'), NavigationMixin],

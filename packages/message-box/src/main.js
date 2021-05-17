@@ -35,8 +35,8 @@ const defaults = {
 
 import Vue from 'vue';
 import msgboxVue from './main.vue';
-import merge from 'element-ui/src/utils/merge';
-import { isVNode } from 'element-ui/src/utils/vdom';
+import merge from 'visual-element-ui/src/utils/merge';
+import { isVNode } from 'visual-element-ui/src/utils/vdom';
 
 const MessageBoxConstructor = Vue.extend(msgboxVue);
 

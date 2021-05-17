@@ -11,7 +11,9 @@
   ]">
     <label-wrap
       :is-auto-width="labelStyle && labelStyle.width === 'auto'"
-      :update-all="form.labelWidth === 'auto'">
+      :update-all="form.labelWidth === 'auto'"
+      v-if="!hideLabel"
+    >
       <label :for="labelFor" class="el-form-item__label" :style="labelStyle" v-if="label || $slots.label">
         <slot name="label">{{label + form.labelSuffix}}</slot>
       </label>
@@ -40,9 +42,9 @@
 </template>
 <script>
   import AsyncValidator from 'async-validator';
-  import emitter from 'element-ui/src/mixins/emitter';
-  import objectAssign from 'element-ui/src/utils/merge';
-  import { noop, getPropByPath } from 'element-ui/src/utils/util';
+  import emitter from 'visual-element-ui/src/mixins/emitter';
+  import objectAssign from 'visual-element-ui/src/utils/merge';
+  import { noop, getPropByPath } from 'visual-element-ui/src/utils/util';
   import LabelWrap from './label-wrap';
   export default {
     name: 'ElFormItem',
@@ -79,7 +81,11 @@
         type: Boolean,
         default: true
       },
-      size: String
+      size: String,
+      hideLabel: {
+        type: Boolean,
+        default: false
+      }
     },
     components: {
       // use this component to calculate auto width
@@ -112,6 +118,7 @@
       },
       contentStyle() {
         const ret = {};
+        if (this.hideLabel) return ret;
         const label = this.label;
         if (this.form.labelPosition === 'top' || this.form.inline) return ret;
         if (!label && !this.labelWidth && this.isNested) return ret;
